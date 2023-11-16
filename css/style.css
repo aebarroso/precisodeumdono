@@ -1,6 +1,82 @@
-.spacer{
+.spacer {
     margin-top: 20px;
 }
-.img_size_carousel{
-    height: 500px;
+
+
+:root {
+/* CSS HEX */
+--blue1: #4B89A9ff;
+--gold: #A79159ff;
+--light-blue: #95B9CDff;
+--white: #F3F7F9ff;
+--blue1-2: #4886A8ff;
+
+/* CSS HSL */
+--blue1: hsla(200, 39%, 48%, 1);
+--gold: hsla(43, 31%, 50%, 1);
+--light-blue: hsla(201, 36%, 69%, 1);
+--white: hsla(200, 33%, 96%, 1);
+--blue1-2: hsla(201, 40%, 47%, 1);
+
+/* SCSS HEX */
+$blue1: #4B89A9ff;
+$gold: #A79159ff;
+$light-blue: #95B9CDff;
+$white: #F3F7F9ff;
+$blue1-2: #4886A8ff;
+
+/* SCSS HSL */
+$blue1: hsla(200, 39%, 48%, 1);
+$gold: hsla(43, 31%, 50%, 1);
+$light-blue: hsla(201, 36%, 69%, 1);
+$white: hsla(200, 33%, 96%, 1);
+$blue1-2: hsla(201, 40%, 47%, 1);
+
+/* SCSS RGB */
+$blue1: rgba(75, 137, 169, 1);
+$gold: rgba(167, 145, 89, 1);
+$light-blue: rgba(149, 185, 205, 1);
+$white: rgba(243, 247, 249, 1);
+$blue1-2: rgba(72, 134, 168, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-right: linear-gradient(90deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-bottom: linear-gradient(180deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-left: linear-gradient(270deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-top-right: linear-gradient(45deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-bottom-right: linear-gradient(135deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-top-left: linear-gradient(225deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-bottom-left: linear-gradient(315deg, #4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
+$gradient-radial: radial-gradient(#4B89A9ff, #A79159ff, #95B9CDff, #F3F7F9ff, #4886A8ff);
 }
+body{
+    background-color: var(--light_blue);
+}
+.divContent{
+    background-color: var(--white);
+}
+[data-bs-theme="blue"] {
+    --bs-body-color: var(--blue1);
+    --bs-body-color-rgb: #{to-rgb($blue1)};
+    --bs-body-bg: var(--blue1-2);
+    --bs-body-bg-rgb: #{to-rgb($blue1-2)};
+    --bs-tertiary-bg: #{$blue-600};
+  
+    .dropdown-menu {
+      --bs-dropdown-bg: #{mix($blue-500, $blue-600)};
+      --bs-dropdown-link-active-bg: #{$blue-700};
+    }
+  
+    .btn-secondary {
+      --bs-btn-bg: #{mix($gray-600, $blue-400, .5)};
+      --bs-btn-border-color: #{rgba($white, .25)};
+      --bs-btn-hover-bg: #{darken(mix($gray-600, $blue-400, .5), 5%)};
+      --bs-btn-hover-border-color: #{rgba($white, .25)};
+      --bs-btn-active-bg: #{darken(mix($gray-600, $blue-400, .5), 10%)};
+      --bs-btn-active-border-color: #{rgba($white, .5)};
+      --bs-btn-focus-border-color: #{rgba($white, .5)};
+      --bs-btn-focus-box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .2);
+    }
+  }
+  
