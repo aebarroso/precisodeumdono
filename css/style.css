@@ -20,3 +20,10 @@ body{
 .logo{
     width: 300px;
 }
+.imgDogDetails{
+    width: 300px;
+}
+.btn{
+    background-color: var(--blue2);
+    color: var(--white);
+}
