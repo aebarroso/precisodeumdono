@@ -3,218 +3,261 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <title>Preciso de um Dono</title>
-    <link rel="stylesheet" href="./css/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-5.3.2-dist/css/bootstrap.min.css">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!--NAV BAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img alt="precisoDeUmDonoLogo" src="./Img/LOGO.PNG"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#index" onclick="menuNav(this)"><img class="logo" alt="precisoDeUmDonoLogo"
+                    src="./Img/LOGO.PNG"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#store">Loja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#foradoption">Cães para adoção</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#adopt">Adotar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#favorites">Favoritos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contactos</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#index" onclick="menuNav(this)">Inicio</a>
+                    <a class="nav-link" href="#about" onclick="menuNav(this)">Sobre nós</a>
+                    <a class="nav-link active" href="#store" onclick="menuNav(this)">Loja</a>
+                    <a class="nav-link" href="#foradoption" onclick="menuNav(this)">Cães para adoção</a>
+                    <a class="nav-link" href="#adopt" onclick="menuNav(this)">Adotar</a>
+                    <a class="nav-link" href="#favorites" onclick="menuNav(this)">Favoritos</a>
+                    <a class="nav-link" href="#contact" onclick="menuNav(this)">Contactos</a>
+                </div>
             </div>
         </div>
     </nav>
+    <!--END NAV BAR-->
     <div class="container">
-        <section class="mt-5">
+        <h1>Loja</h1>
+        <section class="mt-5 p-3">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/dogfood.png" class="card-img-top" alt="Comida cão adulto Carne">
+                        <div class="card-body">
+                            <h5 class="card-title">Comida para cão</h5>
+                            <p class="card-text">Comida para cães adultos Pedigree com bife</p>
+                            <a href="#" class="btn btn-primary" value="caoadulto" id="caoadulto">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" onclick="clickcard()" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/dogfood2.png" class="card-img-top" alt="Comida cão adulto Vegetariano">
+                        <div class="card-body">
+                            <h5 class="card-title">Comida para Cão</h5>
+                            <p class="card-text">Comida para cães adultos Pedigree com Galinha e vegetais</p>
+                            <a href="#" class="btn btn-primary" value="caovegetariano" id="caovegetariano">Comprar</a>
+                            <div class="col mb-4"></div>
+                                <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25" maxlength="3" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/dogfood3.png" class="card-img-top" alt="Comida cão bebé">
+                        <div class="card-body">
+                            <h5 class="card-title">Comida para Cão</h5>
+                            <p class="card-text">Comida para cães bebés Pedigree com Galinha e Leite</p>
+                            <a href="#" class="btn btn-primary" value="caobebe" id="caobebe">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/brinquedo1.png" class="card-img-top" alt="Brinquedo Cão">
+                        <div class="card-body">
+                            <h5 class="card-title">Brinquedo para cão</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="dogtoy" id="dogtoy">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/cattoy.jpg" class="card-img-top" alt="Brinquedo Gato">
+                        <div class="card-body">
+                            <h5 class="card-title">Brinquedo para Gato</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="cattoy" id="cattoy">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col mb-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="img/dogfood.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="col mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/dogfood.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/dogfood2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col mb-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/dogfood3.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/catfountain-2.jpg" class="card-img-top" alt="Fonte de agua para gato">
+                        <div class="card-body">
+                            <h5 class="card-title">Fonte de Água para gatos</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="catfountain" id="catfountain">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/catscratcher.jpg" class="card-img-top" alt="Arranhador para Gato">
+                        <div class="card-body">
+                            <h5 class="card-title">Arranhador para Gato</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="catscratcher" id="catscratcher">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/coleirapulgas.jpg" class="card-img-top" alt="Anti Pulgas">
+                        <div class="card-body">
+                            <h5 class="card-title">Coleira anti pulgas</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="coleirapulgas" id="coleirapulgas">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Img/store/trela.jpg" class="card-img-top" alt="Trela">
+                        <div class="card-body">
+                            <h5 class="card-title">Trela</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's content.</p>
+                            <a href="#" class="btn btn-primary" value="trela" id="trela">Comprar</a>
+                            <div class="col mb-4"></div>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-white btn-minuse" type="button">-</button>
+                                </span>
+                                <input type="text" class="form-control no-padding add-color text-center height-25"
+                                    maxlength="3" id="input" value="0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-red btn-pluss" type="button">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div> <!-- Fim do container-->
+    </section>
+    <div class="col mb-4">
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+            </ul>
+        </nav>
         <!-- Footer -->
         <footer class="text-center text-lg-start bg-white text-muted">
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                    <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 link-secondary">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
             <section class="">
                 <div class="container text-center text-md-start mt-5">
                     <!-- Grid row -->
@@ -223,7 +266,7 @@
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3 text-secondary"></i>Company name
+                                <i class="fas fa-gem me-3 text-secondary"></i>Preciso de um Dono
                             </h6>
                             <p>
                                 Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -239,16 +282,16 @@
                                 Products
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Angular</a>
+                                <a href="#!" class="text-reset">Comida</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">React</a>
+                                <a href="#!" class="text-reset">Brinquedos</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Vue</a>
+                                <a href="#!" class="text-reset">Periféricos</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Laravel</a>
+                                <a href="#!" class="text-reset">Favoritos</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -260,16 +303,16 @@
                                 Useful links
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Pricing</a>
+                                <a href="#!" class="text-reset">Preços</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Settings</a>
+                                <a href="#!" class="text-reset">Definições</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Orders</a>
+                                <a href="#!" class="text-reset">Compras</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Help</a>
+                                <a href="#!" class="text-reset">Ajuda</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -278,10 +321,10 @@
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+                            <p><i class="fas fa-home me-3 text-secondary"></i>Portugal, algures</p>
                             <p>
                                 <i class="fas fa-envelope me-3 text-secondary"></i>
-                                info@example.com
+                                precisodeumdono@example.com
                             </p>
                             <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
                             <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
@@ -298,11 +341,12 @@
                 © 2021 Copyright:
                 <a class="text-reset fw-bold" href="...">Preciso de um dono</a>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous"></script>
-            <script src="./css/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <!--<script src="css/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>-->
+        <script src="assets/script.js"></script>
 </body>
 
 </html>

@@ -15,5 +15,8 @@ body{
 } 
 .container{
     background-color: var(--white);
+    border-radius: 5px;
 }
-  
+.logo{
+    width: 300px;
+}
