@@ -1,6 +1,29 @@
-.spacer{
-    margin-top: 20px;
+:root {
+/* CSS HEX */
+--blue1: #5795B4ff;
+--gold: #A79159ff;
+--light-blue: #95B9CDff;
+--white: #F3F7F9ff;
+--blue2: #4886A8ff;
 }
-.img_size_carousel{
-    height: 500px;
+body{
+    background-color: var(--light-blue);
+}
+.navbar{
+    --bs-bg-opacity: 1;
+    background-color: var(--blue1);
+} 
+.container{
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.logo{
+    width: 300px;
+}
+.imgDogDetails{
+    width: 300px;
+}
+.btn{
+    background-color: var(--blue2);
+    color: var(--white);
 }
