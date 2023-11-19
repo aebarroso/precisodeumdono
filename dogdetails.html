@@ -37,46 +37,69 @@
 
   <!--BEGIN CONTENT-->
   <div class="container mt-5 p-5">
-    <div class="row">
-      <!--START ROW-->
-      <div class="col-6 mt-3">
-        <h2>Detalhes</h2>
-        <!-- DOG IMAGE CAROUCEL-->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="Img/dogdetails/adoptapetprecisodeumdono.jpg" class="d-block w-100" alt="...">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" colspan="3">
+            <h2>Detalhes</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="imgDogDetail" rowspan="6">
+            <!-- DOG IMAGE CAROUCEL-->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade w-100">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="Img/dogdetails/adoptapetprecisodeumdono.jpg" class="d-block w-100"
+                    alt="Imagens do cao selecionado">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <!--END CAROUSEL-->
-      <div class="col-6 mt-3">
-        <br>
-        <br>
-        <h2>Nome do cão</h2>
-        <p>Idade</p>
-        <p>Genero</p>
-        <p>Raca</p>
-        <p>Porte</p>
-
-        <h2>Descrição</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, commodi distinctio voluptatem voluptates
-          ipsam quos a in quia eius corrupti officia nesciunt ipsum. Quasi, illo nesciunt labore perspiciatis
-          voluptatem assumenda.</p>
-      </div>
-      <!--END ROW-->
-    </div>
+          </td>
+          <!--END CAROUSEL-->
+        </tr>
+        <tr>
+          <td>Nome do cão</td>
+          <td>Faisca</td>
+        </tr>
+        <tr>
+          <td>Idade</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>Genero</td>
+          <td>Macho</td>
+        </tr>
+        <tr>
+          <td>Raca</td>
+          <td>Desconhecida</td>
+        </tr>
+        <tr>
+          <td>Porte</td>
+          <td>Medio</td>
+        </tr>
+        <tr>
+          <td colspan="3">Descrição</td>
+        </tr>
+        <tr>
+          <td colspan="3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, commodi distinctio voluptatem voluptates
+            ipsam quos a in quia eius corrupti officia nesciunt ipsum. Quasi, illo nesciunt labore perspiciatis
+            voluptatem assumenda.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <!--END CONTENT-->
   <!-- Footer -->
