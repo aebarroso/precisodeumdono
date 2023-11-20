@@ -32,6 +32,7 @@ body{
     .table td {    display: table-row; }
 }
 @media all and (max-width:400px){
+    .logo{  width: 200px; }
 .red{
     color: red;
 }
