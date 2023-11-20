@@ -33,6 +33,16 @@ body{
 }
 @media all and (max-width:400px){
     .logo{  width: 200px; }
+}
+@media all and (max-width:320px){
+    .logo{  width: 100px; }
+}
 .red{
     color: red;
+}
+.img-index{
+    width: 100%;
+}
+.w-contact{
+    max-width: 100px;
 }
