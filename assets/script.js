@@ -5,10 +5,24 @@ const curlApi2 = "https://api.petfinder.com/v2/oauth2/token";
 const apiURL = "https://api.petfinder.com/v2/animals";
 
 // Variaveis para a utilização do token
-//var apiToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJrMXJOdE5qRm93NDdUY0dRS25SS1J1emlCZWRKeDVWR1NOdkZEZ3NKakZ1RVFjS0xtQSIsImp0aSI6ImIzNDUzZTA4NDg2ZWFmZmJmNTVjZjkyYTU3ZmRlZjg4M2RmM2FiNzMxMzJhNWVjOTE4MjM3ZmIzOWE1MTVlMWE3YzA5NzdiYWI0YWI3NTg3IiwiaWF0IjoxNzAyMjM4MzczLCJuYmYiOjE3MDIyMzgzNzMsImV4cCI6MTcwMjI0MTk3Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.MsTcJQqdNm7Kdhsh2Hqr1bksJi4FdbRa0AW7jgxqSoDW4oere71wk1STs3wiU_RmVI_tUNPyA_Bh0w9xKDKs3FrrR4VN89FXOBjfDzuBGqhxWBBUbmzR2wS2fSk4yZYxptJ082Bi0lT82potxyT10TYpWfN8qhBV540trjhKkdSHhzSDhoNod27vwUBgfcyRiwQJtcu4MA6aByhcdrxc_iLQbRTLTlo2BJT4mXJ94msEbUU5RUw8JkB-pxWlpvvk_uSyuhg3my-BNJRi7wxQ6bx5eSwz2s9OoTvykPYdvVYiS08FTqcJ6duStKeiAxzF7QCteMj5lOZdPzktrybIAw";
-var apiToken = "";
 var gender = ['Male', 'Female'];
+var apiToken;
+var clonedCard = $(".card-pet").clone();
+$(".card-pets").empty();
 
+// Evento para o carregamento da página
+function menuNav(menu) {
+    document.location.href = String(menu).split("#")[1] + ".html";
+}
+
+// Evento para o carregamento da página
+function loadPets(){
+    $(".card-pets").empty();
+    getToken();
+    getPet();
+}
+
+// Função para a obtenção do token da api petfinder
 function getToken(){
 $.ajax({    
     url: curlApi2,
@@ -21,47 +35,16 @@ $.ajax({
         client_secret: apiSecret
     },
     success: function(result){
-        console.log(result);
         apiToken = result.access_token;
     },
     error: function(error){
         console.log(error);
     }
 });
-alert(apiToken);
-return apiToken;
 }
 
-
-function menuNav(menu) {
-    document.location.href = String(menu).split("#")[1] + ".html";
-}
-
-$input = $('input[type="text"]');
-
-$('.btn').on('click', function () {
-    $val = $input.val();
-    if ($(this).hasClass('btn-minuse')) {
-        $input.val(parseInt($val) - 1);
-        if (parseInt($val - 1) <= 0) {
-            $input.val(0);
-        }
-    } else {
-        $input.val(parseInt($val) + 1);
-    }
-});
-document.addEventListener("DOMContentLoaded", function(){
-    apiToken=getToken();
-    getPet();
-}); 
-function findGender(gen){
-    $('#petList').empty();
-    alert(gen);
-    getPet();
-}
-
-function getPet(gender){
-    alert(apiToken);
+function getPet(){
+    alert("getPet");
     $.ajax({
         url: apiURL,
         type: "GET",
@@ -78,7 +61,7 @@ function getPet(gender){
             //console.log(result);
             $.each(result.animals, function(index, pet){
                 console.log(pet);
-                    $("#petList").append(createCard(index, pet));
+                cloneCard(index, pet);
             });
         },
         error: function(error){
@@ -87,34 +70,30 @@ function getPet(gender){
     });
 }
 
-function createCard(index, pet){
-    let card = document.createElement("div");
-    card.className = "card";
-    card.style = "width: 18rem;";
-    let img = document.createElement("img");
-    if(pet.primary_photo_cropped != null){
-        img.src = pet.primary_photo_cropped.medium;
-    } else {
-        img.src = "Img/no-image-available-icon.jpg";
-    }
-    img.className = "card-img-top";
-    img.alt = pet.name+" image";
-    let cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-    let cardTitle = document.createElement("h5");
-    cardTitle.className = "card-title";
-    cardTitle.innerHTML = pet.name;
-    let cardText = document.createElement("p");
-    cardText.className = "card-text";
-    cardText.innerHTML = pet.gender;
-    let cardButton = document.createElement("a");
-    cardButton.className = "btn btn-primary";
-    cardButton.innerHTML = "Go somewhere";
-    cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
-    cardBody.appendChild(cardButton);
-    card.appendChild(img);
-    card.appendChild(cardBody);
-    return card;
+$input = $('input[type="text"]');
 
+$('.btn').on('click', function () {
+    $val = $input.val();
+    if ($(this).hasClass('btn-minuse')) {
+        $input.val(parseInt($val) - 1);
+        if (parseInt($val - 1) <= 0) {
+            $input.val(0);
+        }
+    } else {
+        $input.val(parseInt($val) + 1);
+    }
+});
+
+function cloneCard(index, pet){
+    var card = clonedCard.clone();
+    if(pet.primary_photo_cropped != null){
+        $(".img-pet", card).attr("src", pet.primary_photo_cropped.medium);
+    } else {
+        $(".img-pet", card).attr("src", "Img/no-image-available-icon.jpg");
+    }
+    $(".name-pet", card).text(pet.name);
+    $(".desc-pet", card).text(pet.description);
+    $(".gender-pet", card).text(pet.gender);
+    $(".list-pets").append(card);
+    
 }
