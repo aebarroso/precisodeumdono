@@ -1,49 +1,71 @@
 :root {
-/* CSS HEX */
---blue1: #5795B4ff;
---gold: #A79159ff;
---light-blue: #95B9CDff;
---white: #F3F7F9ff;
---blue2: #4886A8ff;
+    /* CSS HEX */
+    --blue1: #5795B4ff;
+    --gold: #A79159ff;
+    --light-blue: #95B9CDff;
+    --white: #F3F7F9ff;
+    --blue2: #4886A8ff;
 }
-body{
+
+body {
     background-color: var(--light-blue);
 }
-.navbar{
+
+.navbar {
     --bs-bg-opacity: 1;
     background-color: var(--blue1);
-} 
-.container{
+}
+
+.container {
     background-color: var(--white);
     border-radius: 5px;
 }
-.logo{
+
+.logo {
     width: 300px;
 }
-.imgDogDetails{
+
+.imgDogDetails {
     width: 300px;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: var(--blue2);
     color: var(--white);
 }
+
 @media all and (max-width:768px) {
-    .table tr {    display: table;  width:100%;    }
-    .table td {    display: table-row; }
+    .table tr {
+        display: table;
+        width: 100%;
+    }
+
+    .table td {
+        display: table-row;
+    }
 }
-@media all and (max-width:400px){
-    .logo{  width: 200px; }
+
+@media all and (max-width:400px) {
+    .logo {
+        width: 200px;
+    }
 }
-@media all and (max-width:320px){
-    .logo{  width: 100px; }
+
+@media all and (max-width:320px) {
+    .logo {
+        width: 100px;
+    }
 }
-.red{
+
+.red {
     color: red;
 }
-.img-index{
+
+.img-index {
     width: 100%;
 }
-.w-contact{
+
+.w-contact {
     max-width: 100px;
 }
 
@@ -52,4 +74,16 @@ body{
     height: 15vw;
     object-fit: cover;
     min-height: 150px;
+}
+#loadDotDoInferno {
+    position: fixed;
+    background-color: var(--blue1);
+    z-index: 9999;
+}
+.spinner-grow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
 }

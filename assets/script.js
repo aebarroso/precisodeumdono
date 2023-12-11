@@ -16,60 +16,61 @@ function menuNav(menu) {
 }
 
 // Evento para o carregamento da página
-function loadPets(){
-    $(".card-pets").empty();
+function loadPets() {
+    $(".list-pets").empty();
     getToken();
     getPet();
 }
 
 // Função para a obtenção do token da api petfinder
-function getToken(){
-$.ajax({    
-    url: curlApi2,
-    type: "POST",
-    dataType: "json",
-    contentType: "application/x-www-form-urlencoded",
-    data: {
-        grant_type: 'client_credentials',
-        client_id: apiKey,
-        client_secret: apiSecret
-    },
-    success: function(result){
-        apiToken = result.access_token;
-    },
-    error: function(error){
-        console.log(error);
-    }
-});
+function getToken() {
+    $(".modal-dialog").show();
+    $.ajax({
+        url: curlApi2,
+        type: "POST",
+        dataType: "json",
+        async: false,
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+            grant_type: 'client_credentials',
+            client_id: apiKey,
+            client_secret: apiSecret
+        },
+        success: function (result) {
+            apiToken = result.access_token;
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
 }
 
-function getPet(){
-    alert("getPet");
+function getPet() {
     $.ajax({
         url: apiURL,
         type: "GET",
         contentType: "application/json",
         headers: {
-            'Authorization' : 'Bearer ' + apiToken
+            'Authorization': 'Bearer ' + apiToken
         },
         data: {
             type: "Dog",
             gender: gender,
             status: "adoptable"
         },
-        success: function(result){
+        success: function (result) {
             //console.log(result);
-            $.each(result.animals, function(index, pet){
+            $.each(result.animals, function (index, pet) {
                 console.log(pet);
                 cloneCard(index, pet);
             });
+            $(".modal-dialog").hide();
         },
-        error: function(error){
+        error: function (error) {
             console.log(error);
         }
     });
 }
-
 $input = $('input[type="text"]');
 
 $('.btn').on('click', function () {
@@ -84,9 +85,9 @@ $('.btn').on('click', function () {
     }
 });
 
-function cloneCard(index, pet){
+function cloneCard(index, pet) {
     var card = clonedCard.clone();
-    if(pet.primary_photo_cropped != null){
+    if (pet.primary_photo_cropped != null) {
         $(".img-pet", card).attr("src", pet.primary_photo_cropped.medium);
     } else {
         $(".img-pet", card).attr("src", "Img/no-image-available-icon.jpg");
@@ -94,6 +95,7 @@ function cloneCard(index, pet){
     $(".name-pet", card).text(pet.name);
     $(".desc-pet", card).text(pet.description);
     $(".gender-pet", card).text(pet.gender);
+    $(".age-pet", card).text(pet.age);
     $(".list-pets").append(card);
-    
+
 }
