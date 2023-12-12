@@ -19,7 +19,6 @@ function menuNav(menu) {
 function loadPets() {
     $(".list-pets").empty();
     getToken();
-    getPet();
 }
 
 // Função para a obtenção do token da api petfinder
@@ -29,7 +28,6 @@ function getToken() {
         url: curlApi2,
         type: "POST",
         dataType: "json",
-        async: false,
         contentType: "application/x-www-form-urlencoded",
         data: {
             grant_type: 'client_credentials',
@@ -38,6 +36,7 @@ function getToken() {
         },
         success: function (result) {
             apiToken = result.access_token;
+            getPet();
         },
         error: function (error) {
             console.log(error);
