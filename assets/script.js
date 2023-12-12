@@ -6,7 +6,7 @@ const apiURL = "https://api.petfinder.com/v2/animals";
 
 // Variaveis para a utilização do token
 var gender = ['Male', 'Female'];
-var apiToken;
+var apiToken=null;
 var clonedCard = $(".card-pet").clone();
 $(".card-pets").empty();
 
@@ -18,7 +18,7 @@ function menuNav(menu) {
 // Evento para o carregamento da página
 function loadPets() {
     $(".list-pets").empty();
-    getToken();
+    getPet();
 }
 
 // Função para a obtenção do token da api petfinder
@@ -45,6 +45,9 @@ function getToken() {
 }
 
 function getPet() {
+    if(token == null){
+        getToken();
+    }
     $.ajax({
         url: apiURL,
         type: "GET",
@@ -67,6 +70,7 @@ function getPet() {
         },
         error: function (error) {
             console.log(error);
+            getToken();
         }
     });
 }
