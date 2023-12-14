@@ -22,7 +22,7 @@ function loadPets() {
 }
 
 // Função para a obtenção do token da api petfinder
-function getToken() {
+function getToken(apiToken) {
     $(".modal-dialog").show();
     $.ajax({
         url: curlApi2,
@@ -36,7 +36,7 @@ function getToken() {
         },
         success: function (result) {
             apiToken = result.access_token;
-            getPet();
+            getPet(apiToken);
         },
         error: function (error) {
             console.log(error);
@@ -44,9 +44,9 @@ function getToken() {
     });
 }
 
-function getPet() {
-    if(token == null){
-        getToken();
+function getPet(apiToken) {
+    if(apiToken == null){
+        getToken(apiToken);
     }
     $.ajax({
         url: apiURL,
@@ -70,7 +70,7 @@ function getPet() {
         },
         error: function (error) {
             console.log(error);
-            getToken();
+            getToken(apiToken);
         }
     });
 }
