@@ -23,8 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    
+                <div class="navbar-nav ms-auto">      
                     <a class="nav-link" href="#index" onclick="menuNav(this)">Inicio</a>
                     <a class="nav-link" href="#about" onclick="menuNav(this)">Sobre nós</a>
                     <a class="nav-link active" href="#store" onclick="menuNav(this)">Loja</a>
@@ -41,32 +40,32 @@
     <div class="container mt-5 p-3">
         <h1>Loja</h1>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card card-store" >
+            <div class="col-12 col-md-4 col-lg-4 mb-4">
+                <div class="card card-store">
                     <img src="Img/store/dogfood.png" class="card-img-top img-prod" alt="Comida cão adulto Carne">
                     <div class="card-body">
-                        <h5 class="card-title" id="produto1" >Comida para cão</h5>
+                        <h5 class="card-title" id="produto1" >Comida para Cão com bife </h5>
                         <p class="card-text">Comida para cães adultos Pedigree com bife</p>
                         <a href="#" class="btn btn-primary" value="caoadulto" onclick="btnBuy(1)">Comprar</a>
                         <div class="col mb-4"></div>
                         <div class="input-group">
                             <span class="input-group-btn">
-                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(1)" >-</button>
+                                <button class="btn btn-danger btn-minuse" onclick="minus(1)" type="button">-</button>
                             </span>
                             <input type="text" class="form-control no-padding add-color text-center height-25"
                                 maxlength="3" id="input1" value="0">
                             <span class="input-group-btn">
-                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(1)">+</button>
+                                <button class="btn btn-success btn-pluss" onclick="plus(1)" type="button">+</button>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-4 col-lg-4 mb-4">
                 <div class="card card-store" >
                     <img src="Img/store/dogfood2.png" class="card-img-top img-prod" alt="Comida cão adulto Vegetariano">
                     <div class="card-body">
-                        <h5 class="card-title" id="produto2">Comida para Cão</h5>
+                        <h5 class="card-title" id="produto2">Comida para Cão Galinha e vegetais</h5>
                         <p class="card-text">Comida para cães adultos Pedigree com Galinha e vegetais</p>
                         <a href="#" class="btn btn-primary carrinho" value="caovegetariano" onclick="btnBuy(2)">Comprar</a>
                         <div class="col mb-4"></div>
@@ -83,11 +82,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="col-12 col-md-4 col-lg-4 mb-4">
                 <div class="card card-store" >
                     <img src="Img/store/dogfood3.png" class="card-img-top img-prod" alt="Comida cão bebé">
                     <div class="card-body">
-                        <h5 class="card-title" id="produto3">Comida para Cão</h5>
+                        <h5 class="card-title" id="produto3">Comida para Cão bebé Galinha e Leite</h5>
                         <p class="card-text">Comida para cães bebés Pedigree com Galinha e Leite</p>
                         <a href="#" class="btn btn-primary carrinho" value="caobebe" onclick="btnBuy(3)">Comprar</a>
                         <div class="col mb-4"></div>
@@ -265,7 +264,6 @@
                         <p>
                             Projeto efetuado na Unidade Curricular de Programação Web-Cliente.
                         <p>Elaborado Por: André Barroso, Joel Barbeiro, Pedro Lourenço.</p>
-                        </p>
                     </div>
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">

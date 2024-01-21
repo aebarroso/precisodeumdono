@@ -60,20 +60,20 @@ function getPet(apiToken) {
             status: "adoptable"
         },
         success: function (result) {
-            var count=0;
+            var count = 0;
+            var addedPetNames = [];
             $.each(result.animals, function (index, pet) {
-                if (pet.name[index] == pet.name[index + 1]) {
-                  pet == null;  
+                if (addedPetNames.includes(pet.name)) {
+                    return; 
                 }
+                addedPetNames.push(pet.name); 
                 if (window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html") {
                     cloneCard(index, pet);
                 }
                 if (window.location.pathname.split("/").pop() == "index.html") {
-                    if (pet.primary_photo_cropped != null) {
-                        carouselConstructorHeading(pet, count)
+                        carouselConstructorHeading(pet, count);
                         carouselConstructor(pet, count);
                         count++;
-                    }
                 }
             });
             $(".modal-dialog").hide();
