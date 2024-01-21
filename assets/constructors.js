@@ -18,6 +18,20 @@ function cloneCard(index, pet) {
     updateSearched(detBtn, pet);
 }
 
+function cloneCardCart(index, product) {
+    var card = clonedCard.clone();
+    $(".img-product", card).attr("src", pet.primary_photo_cropped.medium);
+    $(".name-product", card).text(pet.name);
+    $(".desc-product", card).text(pet.gender);
+    $(".list-cart").append(card);
+    
+    var cartBtn = $(".btn-cart", card);
+    
+    updateCartVisual(cartBtn, product);
+    updateCarted(cartBtn, product);
+}
+
+
 function carouselConstructorHeading(pet, count) {
     if (count > 0) {
         $(".carousel-indicators").append('<button type="button" class="indicator-item" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' + count + '" aria-current="true" aria-label="Slide ' + count + 1 + '"></button>');
@@ -30,7 +44,7 @@ function carouselConstructorHeading(pet, count) {
 function carouselConstructor(pet, count) {
 
     $(".dog-show-" + count).append('<img class="img-thumbnail img-index w-100 img-pet btn-details" src="' + pet.primary_photo_cropped.medium + '" alt="Image of ' + pet.name + '">');
-    var carouselCaption = $('<div class="carousel-caption d-md-block">')
+    var carouselCaption = $('<div class="carousel-caption d-md-block backg btn-details" >')
     carouselCaption.append('<h5>' + pet.name + '</h5>');
     carouselCaption.append('<p>Clique para detalhes</p>');
     $(".dog-show-" + count).append(carouselCaption)

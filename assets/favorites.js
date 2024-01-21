@@ -59,12 +59,14 @@ function updateFavorites(button, pet) {
         if (Object.keys(favorites).length === 0) {
             $("#noFavoritesMsg").prepend("<h1 id='noFavoritesMsg'>You have no favorites at this time</h1>");
             $("#noFavoritesMsg").show();
+            $(".list-pets").empty();
             $(".modal-dialog").hide();
         } else {
             $("#noFavoritesMsg").hide();
             $(".list-pets").empty();
+        }
         $.each(favorites, function (index, pet) {
             console.log(pet);
             cloneCard(index, pet);
         });
-        $(".modal-dialog").hide();}}
+        $(".modal-dialog").hide();}

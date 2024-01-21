@@ -75,11 +75,13 @@ body {
     object-fit: cover;
     min-height: 150px;
 }
+
 #loadDot {
     position: fixed;
     background-color: var(--blue1);
     z-index: 9999;
 }
+
 .spinner-grow {
     position: absolute;
     left: 50%;
@@ -91,11 +93,35 @@ body {
 .card-body {
     display: flex;
     flex-direction: column;
-  }
-  
-  button.btn {
+}
+
+button.btn {
     margin-top: auto;
-  }
+}
 
+.backg {
+    background-color: rgba(167, 145, 89, 0.4);
+}
 
-   
+.carrinho {
+    color: white;
+    margin: 10px;
+}
+
+.img-prod {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-prod:hover {
+    transform: scale(1.1);
+}
+
+.w-contact:hover {
+    transform: scale(1.1);
+}
+
+.card-store{
+    width: 100%;
+}

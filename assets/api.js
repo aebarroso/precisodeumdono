@@ -62,17 +62,20 @@ function getPet(apiToken) {
         success: function (result) {
             var count=0;
             $.each(result.animals, function (index, pet) {
-                if(window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html"){
+                if (pet.name[index] == pet.name[index + 1]) {
+                  pet == null;  
+                }
+                if (window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html") {
                     cloneCard(index, pet);
                 }
-                if(window.location.pathname.split("/").pop() == "index.html"){
-                    if(pet.primary_photo_cropped != null){
+                if (window.location.pathname.split("/").pop() == "index.html") {
+                    if (pet.primary_photo_cropped != null) {
                         carouselConstructorHeading(pet, count)
                         carouselConstructor(pet, count);
                         count++;
                     }
                 }
-            });   
+            });
             $(".modal-dialog").hide();
         },
         error: function (error) {
