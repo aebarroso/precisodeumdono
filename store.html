@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Preciso de um Dono</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--NAV BAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#index" onclick="menuNav(this)"><img class="logo" alt="precisoDeUmDonoLogo"
+                    src="./Img/LOGO.PNG"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#index" onclick="menuNav(this)">Inicio</a>
+                    <a class="nav-link" href="#about" onclick="menuNav(this)">Sobre nós</a>
+                    <a class="nav-link active" href="#store" onclick="menuNav(this)">Loja</a>
+                    <a class="nav-link" href="#foradoption" onclick="menuNav(this)">Cães para adoção</a>
+                    <a class="nav-link" href="#adopt" onclick="menuNav(this)">Adotar</a>
+                    <a class="nav-link" href="#favorites" onclick="menuNav(this)">Favoritos</a>
+                    <a class="nav-link" href="#contact" onclick="menuNav(this)">Contactos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV BAR-->
+    <div class="container mt-5 p-3">
+        <h1>Loja</h1>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/dogfood.png" class="card-img-top" alt="Comida cão adulto Carne">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto1" >Comida para cão</h5>
+                        <p class="card-text">Comida para cães adultos Pedigree com bife</p>
+                        <a href="#" class="btn btn-primary" value="caoadulto" onclick="btnBuy(1)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" onclick="minus(1)" type="button">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input1" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" onclick="plus(1)" type="button">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/dogfood2.png" class="card-img-top" alt="Comida cão adulto Vegetariano">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto2">Comida para Cão</h5>
+                        <p class="card-text">Comida para cães adultos Pedigree com Galinha e vegetais</p>
+                        <a href="#" class="btn btn-primary" value="caovegetariano" onclick="btnBuy(2)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(2)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input2" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(2)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/dogfood3.png" class="card-img-top" alt="Comida cão bebé">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto3">Comida para Cão</h5>
+                        <p class="card-text">Comida para cães bebés Pedigree com Galinha e Leite</p>
+                        <a href="#" class="btn btn-primary" value="caobebe" onclick="btnBuy(3)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(3)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input3" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(3)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/brinquedo1.png" class="card-img-top" alt="Brinquedo Cão">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto4">Brinquedo para cão</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="dogtoy" onclick="btnBuy(4)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(4)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input4" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(4)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/cattoy.jpg" class="card-img-top" alt="Brinquedo Gato">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto5">Brinquedo para Gato</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="cattoy" onclick="btnBuy(5)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(5)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input5" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(5)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/catfountain-2.jpg" class="card-img-top" alt="Fonte de agua para gato">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto6">Fonte de Água para gatos</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="catfountain" onclick="btnBuy(6)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(6)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input6" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(6)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/catscratcher.jpg" class="card-img-top" alt="Arranhador para Gato">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto7">Arranhador para Gato</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="catscratcher" onclick="btnBuy(7)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(7)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input7" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(7)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/coleirapulgas.jpg" class="card-img-top" alt="Anti Pulgas">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto8">Coleira anti pulgas</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="coleirapulgas" onclick="btnBuy(8)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(8)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input8" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(8)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="Img/store/trela.jpg" class="card-img-top" alt="Trela">
+                    <div class="card-body">
+                        <h5 class="card-title" id="produto9">Trela</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary" value="trela" onclick="btnBuy(9)">Comprar</a>
+                        <div class="col mb-4"></div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger btn-minuse" type="button" onclick="minus(9)">-</button>
+                            </span>
+                            <input type="text" class="form-control no-padding add-color text-center height-25"
+                                maxlength="3" id="input9" value="0">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-pluss" type="button" onclick="plus(9)">+</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do container-->
+    <div class="col mb-4 p-3">
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Próxima</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--START FOOTER-->
+    <footer class="text-center text-lg-start bg-white text-muted mt-5">
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start mt-5 p-1">
+                <!-- Grid row -->
+                <div class="row mt-4">
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4 mt-6">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-4 text-secondary"></i>PrecisoDeUmDono
+                        </h6>
+                        <p>
+                            Projeto efetuado na Unidade Curricular de Programação Web-Cliente.
+                        <p>Elaborado Por: André Barroso, Joel Barbeiro, Pedro Lourenço.</p>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Mapa do Site
+                        </h6>
+                        <p>
+                            <a href="index.html" class="text-reset">Inicio</a>
+                        </p>
+                        <p>
+                            <a href="about.html" class="text-reset">Sobre Nós</a>
+                        </p>
+                        <p>
+                            <a href="store.html" class="text-reset">Loja</a>
+                        </p>
+                        <p>
+                            <a href="foradoption.html" class="text-reset">Cães para adoção</a>
+                        </p>
+                        <p>
+                            <a href="adopt.html" class="text-reset">Adotar</a>
+                        </p>
+                        <p>
+                            <a href="favorites.html" class="text-reset">Favoritos</a>
+                        </p>
+                        <p>
+                            <a href="contact.html" class="text-reset">Contactos</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contacto do Instituto Politécnico de Leiria</h6>
+                        <p><i class="fas fa-home me-4 text-secondary">
+                                Rua General Norton de Matos, Apartado 4133, 2411-901 Leiria–Portugal</i>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-4 text-secondary">
+                                ipleiria@ipleiria.pt</i>
+                        </p>
+                        <p><i class="fas fa-phone me-4 text-secondary">(+351) 244830010</i></p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(231, 15, 15, 0.025);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="...">Preciso de um dono</a>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="assets/api.js"></script>
+    <script src="assets/details.js"></script>
+    <script src="assets/constructors.js"></script>
+    <script src="assets/favorites.js"></script>
+    <script src="assets/searched.js"></script>
+    <script src="assets/store.js"></script>
+</body>
+
+</html>

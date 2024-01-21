@@ -1,0 +1,101 @@
+:root {
+    /* CSS HEX */
+    --blue1: #5795B4ff;
+    --gold: #A79159ff;
+    --light-blue: #95B9CDff;
+    --white: #F3F7F9ff;
+    --blue2: #4886A8ff;
+}
+
+body {
+    background-color: var(--light-blue);
+}
+
+.navbar {
+    --bs-bg-opacity: 1;
+    background-color: var(--blue1);
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.logo {
+    width: 300px;
+}
+
+.imgDogDetails {
+    width: 300px;
+}
+
+.btn-primary {
+    background-color: var(--blue2);
+    color: var(--white);
+}
+
+@media all and (max-width:768px) {
+    .table tr {
+        display: table;
+        width: 100%;
+    }
+
+    .table td {
+        display: table-row;
+    }
+}
+
+@media all and (max-width:400px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+@media all and (max-width:320px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+.red {
+    color: red;
+}
+
+.img-index {
+    width: 100%;
+}
+
+.w-contact {
+    max-width: 100px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    min-height: 150px;
+}
+#loadDot {
+    position: fixed;
+    background-color: var(--blue1);
+    z-index: 9999;
+}
+.spinner-grow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button.btn {
+    margin-top: auto;
+  }
+
+
+   
