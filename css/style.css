@@ -125,3 +125,15 @@ button.btn {
 .card-store{
     width: 100%;
 }
+
+.img-about{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .card-about{
+        width: 100%;
+    } 
+}

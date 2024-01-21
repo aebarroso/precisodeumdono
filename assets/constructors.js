@@ -18,19 +18,6 @@ function cloneCard(index, pet) {
     updateSearched(detBtn, pet);
 }
 
-function cloneCardCart(index, product) {
-    var card = clonedCard.clone();
-    $(".img-product", card).attr("src", pet.primary_photo_cropped.medium);
-    $(".name-product", card).text(pet.name);
-    $(".desc-product", card).text(pet.gender);
-    $(".list-cart").append(card);
-    
-    var cartBtn = $(".btn-cart", card);
-    
-    updateCartVisual(cartBtn, product);
-    updateCarted(cartBtn, product);
-}
-
 
 function carouselConstructorHeading(pet, count) {
     if (count > 0) {
