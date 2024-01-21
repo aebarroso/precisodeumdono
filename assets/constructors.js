@@ -30,7 +30,7 @@ function carouselConstructorHeading(pet, count) {
 }
 function carouselConstructor(pet, count) {
 
-    $(".dog-show-" + count).append('<img class="img-thumbnail img-index w-100 img-pet btn-details" src="' + pet.primary_photo_cropped.medium + '" alt="Image of ' + pet.name + '">');
+    $(".dog-show-" + count).append('<img class="img-index w-100 img-pet img-pet-carousel btn-details" src="' + pet.primary_photo_cropped.medium + '" alt="Image of ' + pet.name + '">');
     var carouselCaption = $('<div class="carousel-caption d-md-block backg btn-details" >')
     carouselCaption.append('<h5>' + pet.name + '</h5>');
     carouselCaption.append('<p>Clique para detalhes</p>');
