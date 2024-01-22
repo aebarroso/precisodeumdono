@@ -1,3 +1,4 @@
+//funcao para construir os cards de acordo com a lista de pets
 function cloneCard(index, pet) {
     var card = clonedCard.clone();
     if (pet.primary_photo_cropped != null) {
@@ -9,7 +10,7 @@ function cloneCard(index, pet) {
     $(".gender-pet", card).text(pet.gender);
     $(".age-pet", card).text(pet.age);
     $(".list-pets").append(card);
-    
+
 
     var favBtn = $(".add_favoritos", card);
     var detBtn = $(".btn-details", card);
@@ -18,7 +19,7 @@ function cloneCard(index, pet) {
     updateSearched(detBtn, pet);
 }
 
-
+//funcoes para construir o carousel de acordo com a lista de pets
 function carouselConstructorHeading(pet, count) {
     if (count > 0) {
         $(".carousel-indicators").append('<button type="button" class="indicator-item" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' + count + '" aria-current="true" aria-label="Slide ' + count + 1 + '"></button>');
@@ -30,7 +31,7 @@ function carouselConstructorHeading(pet, count) {
 }
 function carouselConstructor(pet, count) {
     if (pet.primary_photo_cropped != null) {
-    $(".dog-show-" + count).append('<img class="img-index w-100 img-pet img-pet-carousel btn-details" src="' + pet.primary_photo_cropped.medium + '" alt="Image of ' + pet.name + '">');
+        $(".dog-show-" + count).append('<img class="img-index w-100 img-pet img-pet-carousel btn-details" src="' + pet.primary_photo_cropped.medium + '" alt="Image of ' + pet.name + '">');
     } else {
         $(".dog-show-" + count).append('<img class="img-index w-100 img-pet img-pet-carousel btn-details" src="Img/carousel/precisodeumdonocaesparaadocao-01.jpg" alt="Image of ' + pet.name + '">');
     }
@@ -43,14 +44,16 @@ function carouselConstructor(pet, count) {
     $(".carousel-inner").append("</div></div>");
 }
 
+
+//funcoes para fazer funcionar os botoes de frente e tras no carousel
 $(document).ready(function () {
     var carouselContainer = $("#carouselExampleDark");
     var prevButton = $("<button type='button' class='carousel-control-prev' aria-label='Previous'><span aria-hidden='true' class='carousel-control-prev-icon'></span></button>");
     var nextButton = $("<button type='button' class='carousel-control-next' aria-label='Next'><span aria-hidden='true' class='carousel-control-next-icon'></span></button>");
-   
+
     carouselContainer.append(prevButton);
     carouselContainer.append(nextButton);
-    
+
     prevButton.click(function () {
         var carouselItems = $(".carousel-item");
         var activeItem = carouselItems.filter(".active");

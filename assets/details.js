@@ -1,5 +1,4 @@
 function load_details(pet) {
-    // Use as informações do objeto
     var cloneTable = $(".dog_details").clone();
     var table = cloneTable.clone();
     $(".dog_details").empty();

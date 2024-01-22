@@ -4,10 +4,11 @@ const apiSecret = "Yj4CeBZJDX9p4VJjW2PjzRojHvYfQ46sqzKe0KRz";
 const curlApi2 = "https://api.petfinder.com/v2/oauth2/token";
 const apiURL = "https://api.petfinder.com/v2/animals";
 
+
 // Variaveis para a utilização do token
 var gender = ['Male', 'Female'];
 var apiToken;
-if(window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html"){
+if (window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html") {
     var clonedCard = $(".card-pet").clone();
 }
 
@@ -17,6 +18,7 @@ function loadPets() {
     getToken(apiToken);
 
 }
+
 // Funcao para carregar pets
 function loadPetsIndex() {
     $(".carousel-inner").empty();
@@ -45,7 +47,7 @@ function getToken(apiToken) {
         }
     });
 }
-
+// Função para a obtenção dos pets petfinder
 function getPet(apiToken) {
     $.ajax({
         url: apiURL,
@@ -64,16 +66,16 @@ function getPet(apiToken) {
             var addedPetNames = [];
             $.each(result.animals, function (index, pet) {
                 if (addedPetNames.includes(pet.name)) {
-                    return; 
+                    return;
                 }
-                addedPetNames.push(pet.name); 
+                addedPetNames.push(pet.name);
                 if (window.location.pathname.split("/").pop() == "foradoption.html" || window.location.pathname.split("/").pop() == "favorites.html") {
                     cloneCard(index, pet);
                 }
                 if (window.location.pathname.split("/").pop() == "index.html") {
-                        carouselConstructorHeading(pet, count);
-                        carouselConstructor(pet, count);
-                        count++;
+                    carouselConstructorHeading(pet, count);
+                    carouselConstructor(pet, count);
+                    count++;
                 }
             });
             $(".modal-dialog").hide();
@@ -83,3 +85,4 @@ function getPet(apiToken) {
         }
     });
 }
+

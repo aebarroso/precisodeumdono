@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <title>Preciso de um Dono</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">      
+                <div class="navbar-nav ms-auto">
                     <a class="nav-link" href="#index" onclick="menuNav(this)">Inicio</a>
                     <a class="nav-link" href="#about" onclick="menuNav(this)">Sobre nós</a>
                     <a class="nav-link active" href="#store" onclick="menuNav(this)">Loja</a>
@@ -38,13 +38,13 @@
     </nav>
     <!--END NAV BAR-->
     <div class="container mt-5 p-3">
-        <h1>Loja</h1>
+        <h1 class="titulo-loja">Loja</h1>
         <div class="row">
             <div class="col-12 col-md-4 col-lg-4 mb-4">
                 <div class="card card-store">
                     <img src="Img/store/dogfood.png" class="card-img-top img-prod" alt="Comida cão adulto Carne">
                     <div class="card-body">
-                        <h5 class="card-title" id="produto1" >Comida para Cão com bife </h5>
+                        <h5 class="card-title" id="produto1">Comida para Cão com bife </h5>
                         <p class="card-text">Comida para cães adultos Pedigree com bife</p>
                         <a href="#" class="btn btn-primary" value="caoadulto" onclick="btnBuy(1)">Comprar</a>
                         <div class="col mb-4"></div>
@@ -62,12 +62,13 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 col-lg-4 mb-4">
-                <div class="card card-store" >
+                <div class="card card-store">
                     <img src="Img/store/dogfood2.png" class="card-img-top img-prod" alt="Comida cão adulto Vegetariano">
                     <div class="card-body">
                         <h5 class="card-title" id="produto2">Comida para Cão Galinha e vegetais</h5>
                         <p class="card-text">Comida para cães adultos Pedigree com Galinha e vegetais</p>
-                        <a href="#" class="btn btn-primary carrinho" value="caovegetariano" onclick="btnBuy(2)">Comprar</a>
+                        <a href="#" class="btn btn-primary carrinho" value="caovegetariano"
+                            onclick="btnBuy(2)">Comprar</a>
                         <div class="col mb-4"></div>
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -83,7 +84,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 col-lg-4 mb-4">
-                <div class="card card-store" >
+                <div class="card card-store">
                     <img src="Img/store/dogfood3.png" class="card-img-top img-prod" alt="Comida cão bebé">
                     <div class="card-body">
                         <h5 class="card-title" id="produto3">Comida para Cão bebé Galinha e Leite</h5>
@@ -184,7 +185,8 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary carrinho" value="catscratcher" onclick="btnBuy(7)">Comprar</a>
+                        <a href="#" class="btn btn-primary carrinho" value="catscratcher"
+                            onclick="btnBuy(7)">Comprar</a>
                         <div class="col mb-4"></div>
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -207,7 +209,8 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary carrinho" value="coleirapulgas" onclick="btnBuy(8)">Comprar</a>
+                        <a href="#" class="btn btn-primary carrinho" value="coleirapulgas"
+                            onclick="btnBuy(8)">Comprar</a>
                         <div class="col mb-4"></div>
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -249,10 +252,10 @@
     </div>
     <!-- Fim do container-->
     <!--START FOOTER-->
-    <footer class="text-center text-lg-start bg-white text-muted mt-5">
+    <footer class="text-center text-lg-start bg-white text-muted mt-5 container-fluid">
         <!-- Section: Links  -->
         <section>
-            <div class="container text-center text-md-start mt-5 p-1">
+            <div class="container-fluid text-center text-md-start mt-5 p-1">
                 <!-- Grid row -->
                 <div class="row mt-4">
                     <!-- Grid column -->

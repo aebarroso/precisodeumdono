@@ -14,7 +14,7 @@ function btnBuy(id) {
     var quantity = document.getElementById("input" + id).value;
     var compras = document.getElementById("produto" + id).innerHTML;
     if (quantity > 0) {
-        alert("Comprou " + quantity + " de " + compras);
+        alert("Comprou " + quantity + " Unidades de " + compras);
     }
     else {
         alert("Não tem produtos adicionados")
